@@ -22,5 +22,4 @@ export const initListAction = (data) => ({
 
 export const getInitList = () => ({
   type: GET_INIT_LIST,
-
 })

@@ -5,7 +5,7 @@ const TodoListUI = (props) => {
   return (
     <div style={{marginTop: '10px', marginLeft: '10px'}}>
       <div>
-        <Input 
+        <Input
           value={props.inputValue} 
           placeholder='todo info' 
           style={{width: '300px', marginRight: '10px'}}
