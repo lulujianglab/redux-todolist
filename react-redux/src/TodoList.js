@@ -1,10 +1,12 @@
 import React from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
+import { connect } from './react-redux-custom'
 import { getInputChangeAction, getAddItemAction, getDeleteItemAction } from './store/actionCreator'
 
 // 无状态组件是一个函数，接收一个props参数
 const TodoList = (props) => {
   const { inputValue, list, handleInputChange, handleClick, handleDelete } = props
+
   return (
     <div>
       <div>
@@ -13,7 +15,7 @@ const TodoList = (props) => {
       </div>
       <ul>
         {
-          list.map((item, index) => {
+          (list || []).map((item, index) => {
             return (
               <li onClick={(index) => handleDelete(index)} key={index}>{item}</li>
             )
